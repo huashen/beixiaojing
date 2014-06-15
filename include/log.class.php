@@ -40,6 +40,7 @@ class Log
 			return $log;
 		}
 
+		clearstatcache(true,$log); //清除缓存
 		$size = filesize($log);
 		if($size <= 1024 * 1024) {
 			return $log;
